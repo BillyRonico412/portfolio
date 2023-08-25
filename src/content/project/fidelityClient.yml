@@ -1,0 +1,13 @@
+title: Fidelity client
+description: Permet d'avoir une carte de fidélité virtuelle sur son smartphone que l'on peut présenter dans différents magasins. 🛍️
+technologies:
+  - "ts"
+  - "react"
+  - "ionic"
+  - "firebase"
+github: https://github.com/BillyRonico412/fidelity-client
+link: https://fidelity-client.vercel.app/
+thumbnail: /project/fidelityClient.png
+level: 3
+month: 8
+year: 2023

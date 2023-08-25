@@ -76,14 +76,14 @@ for (const technologie of props.project.data.technologies) {
     >
       {
         technologies.map((technologie) => (
-          <div class="flex items-center gap-x-0.5">
-            <Icon
-              name="fa:circle"
-              style={{ color: technologie.data.color }}
-              class="text-[8px] w-2"
+          <a href={technologie.data.link}>
+            <img
+              title={technologie.data.name}
+              class="w-4"
+              src={`https://cdn.simpleicons.org/${technologie.data.simpleIcon}/${technologie.data.color}`}
+              alt={technologie.data.name}
             />
-            <p>{technologie.data.name}</p>
-          </div>
+          </a>
         ))
       }
     </div>

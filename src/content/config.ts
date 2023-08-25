@@ -4,6 +4,7 @@ const technology = defineCollection({
 	type: "data",
 	schema: z.object({
 		name: z.string().nonempty(),
+		simpleIcon: z.string().nonempty(),
 		color: z.string().nonempty(),
 		link: z.string().nonempty(),
 	}),
