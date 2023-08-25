@@ -10,11 +10,11 @@ export interface Props {
 const props = Astro.props
 ---
 
-<div>
+<div class="h-full flex flex-col">
   <h2 class="bg-gray-600 text-white text-center py-2 font-semibold">
     {props.parcours.title}
   </h2>
-  <div class="bg-gray-100">
+  <div class="bg-gray-100 flex-grow">
     {
       props.parcours.parcoursItems.map((parcoursItem) => (
         <ParcoursItem parcoursItem={parcoursItem} />
