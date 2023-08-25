@@ -1,0 +1,12 @@
+title: Interface TS vers JSON Schema
+description: Un convertisseur allant de l'interface TS vers du JSON Schema en utilisant les notions de Compilation (Théorie des Langages) vue en master.
+technologies:
+  - react
+  - tailwind
+  - ts
+github: https://github.com/BillyRonico412/interface-ts-to-json-schema
+link: https://interface-ts-to-json-schema.vercel.app/
+thumbnail: /project/interfaceTsToJson.png
+level: 2
+month: 8
+year: 2022

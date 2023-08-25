@@ -1,0 +1,24 @@
+---
+import ParcoursItem, { ParcoursItemInterface } from './ParcoursItem.astro'
+export interface ParcoursInterface {
+  title: string
+  parcoursItems: ParcoursItemInterface[]
+}
+export interface Props {
+  parcours: ParcoursInterface
+}
+const props = Astro.props
+---
+
+<div>
+  <h2 class="bg-gray-600 text-white text-center py-2 font-semibold">
+    {props.parcours.title}
+  </h2>
+  <div class="bg-gray-100">
+    {
+      props.parcours.parcoursItems.map((parcoursItem) => (
+        <ParcoursItem parcoursItem={parcoursItem} />
+      ))
+    }
+  </div>
+</div>

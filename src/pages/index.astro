@@ -1,0 +1,155 @@
+---
+import { getCollection } from 'astro:content'
+import Parcours, {
+  type ParcoursInterface,
+} from '../components/a-propos/Parcours.astro'
+import BlogCard from '../components/blog/BlogCard.astro'
+import ProjectCard from '../components/project/ProjectCard.astro'
+import LayoutMain from '../layouts/LayoutMain.astro'
+const projects = await getCollection('project')
+const blogs = await getCollection('blog')
+const lastProjects = projects
+  .sort((a, b) => {
+    const dateB = new Date()
+    dateB.setMonth(b.data.month - 1)
+    dateB.setFullYear(b.data.year)
+    const dateA = new Date()
+    dateA.setMonth(a.data.month - 1)
+    dateA.setFullYear(a.data.year)
+    return dateB.getTime() - dateA.getTime()
+  })
+  .slice(0, 4)
+const lastBlogs = blogs
+  .sort((a, b) => {
+    const dateB = new Date(b.data.date)
+    const dateA = new Date(a.data.date)
+    return dateB.getTime() - dateA.getTime()
+  })
+  .slice(0, 4)
+const parcoursUniversitaire: ParcoursInterface = {
+  title: 'Parcours universitaire 👨‍🎓',
+  parcoursItems: [
+    {
+      title: 'Université Paul Sabatier',
+      debut: {
+        mois: 8,
+        annee: 2021,
+      },
+      fin: undefined,
+      subtitle: 'Master Science du Logiciel',
+      tasks: [
+        'Méthode Agile SCRUM, Modelisation et Conception avec UML',
+        'Java Spring Boot, Maven, XML',
+        'Web Service REST & SOAP',
+        "Les bases de l'UI/UX",
+      ],
+    },
+    {
+      title: 'Université de la Réunion',
+      debut: {
+        mois: 8,
+        annee: 2018,
+      },
+      fin: {
+        mois: 6,
+        annee: 2021,
+      },
+      subtitle: 'Licence informatique',
+      tasks: [
+        'Programmation Web HTML, CSS, JS, PHP, JavaEE, NodeJS',
+        'Language de programmation Java, JS, C, Python, SQL',
+        "Compréhension et utilisation d'un environnement Linux",
+      ],
+    },
+  ],
+}
+const experienceProfessionelle: ParcoursInterface = {
+  title: 'Expérience proféssionelle 💻',
+  parcoursItems: [
+    {
+      title: 'Ingénieur (Alternance)',
+      debut: {
+        mois: 5,
+        annee: 2022,
+      },
+      fin: undefined,
+      subtitle: 'Akka Technology (3djuump)',
+      tasks: [
+        "Création d'application utilisant des données 3D massive",
+        'Developpement front end avec React et Typescript',
+      ],
+    },
+    {
+      title: "Création d'une application de comptabilité",
+      debut: {
+        mois: 11,
+        annee: 2021,
+      },
+      fin: {
+        mois: 6,
+        annee: 2022,
+      },
+      subtitle: 'SatuSoftware',
+      tasks: [
+        'Recherche sur les technologies multiplateformes',
+        'Utilisation de la méthode agile SCRUM',
+        'Front End avec VueJS, SCSS et Axios pour consommer les API',
+        "Back End avec NodeJS, expressJS, PostGresQL et l'ORM Sequelize pour fournir une API REST qui sera documenté avec Swagger",
+      ],
+    },
+  ],
+}
+---
+
+<LayoutMain
+  title="Ronico Billy"
+  description="Étudiant en master informatique à l'Université Paul Sabatier de Toulouse 👨‍🎓 et freelance dans mes heures perdus, j'ai un profil de développeur Full Stack Typescript 💻. Je suis polyvalent et maîtrise les diverses étapes de la création d'une application web ou mobile. De la compréhension des besoins des utilisateurs, au développement frontend et backend jusqu'au deploiement 🚀. Amoureux du typage fort, la téchnologie tRPC et gRPC m'interesse."
+>
+  <main>
+    <div class="flex flex-col gap-y-8">
+      <section>
+        <p class="font-medium">Salut 👋</p>
+        <h1 class="text-2xl font-bold pt-2">Je suis Ronico Billy</h1>
+        <h2 class="text-xl font-semibold">
+          Développeur full stack et freelance
+        </h2>
+
+        <p class="pt-4">
+          Étudiant en master informatique à l'Université Paul Sabatier de
+          Toulouse 👨‍🎓 et freelance dans mes heures perdus, j'ai un profil de
+          développeur Full Stack TypeScript 💻. Je suis polyvalent et maîtrise
+          les diverses étapes de la création d'une application web ou mobile. De
+          la compréhension des besoins des utilisateurs, au développement
+          frontend et backend jusqu'au deploiement 🚀. Amoureux du typage fort
+          proposé par TypeScript, la téchnologie tRPC m'interesse beaucoup.
+        </p>
+      </section>
+
+      <section>
+        <h3 class="text-xl font-bold pt-2">Mon parcours ⬆️</h3>
+        <div class="grid grid-cols-2 gap-x-8 mt-4">
+          <Parcours parcours={parcoursUniversitaire} />
+          <Parcours parcours={experienceProfessionelle} />
+        </div>
+      </section>
+
+      <section class="flex flex-col gap-y-4">
+        <h3 class="text-xl font-bold pt-2">Mes derniers projets 💻</h3>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-x-8 gap-y-8"
+        >
+          {lastProjects.map((project) => <ProjectCard project={project} />)}
+        </div>
+      </section>
+
+      <section class="flex flex-col gap-y-4">
+        <h3 class="text-xl font-bold pt-2">Mes derniers blogs 📖</h3>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-x-8 gap-y-8"
+        >
+          {lastBlogs.map((blog) => <BlogCard blog={blog} />)}
+        </div>
+      </section>
+    </div>
+  </main>
+</LayoutMain>

@@ -1,0 +1,12 @@
+title: To do App
+description: Un classique. Support du PWA (installable), dark mode et la sauvegarde des taches dans le localStorage
+technologies:
+  - react
+  - tailwind
+  - ts
+github: https://github.com/BillyRonico412/todo
+link: https://billyronico412.github.io/todo/
+thumbnail: /project/toDoApp.jpg
+level: 2
+month: 6
+year: 2022

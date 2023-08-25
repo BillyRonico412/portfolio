@@ -1,0 +1,27 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+export interface Props {
+  blog: CollectionEntry<'blog'>
+}
+const props = Astro.props
+---
+
+<div class="flex">
+  <a
+    class="flex flex-col rounded overflow-hidden bg-gray-50 border cursor-pointer border-gray-200 shadow group"
+    href={'/blogs/' + props.blog.slug}
+  >
+    <div class="aspect-square relative transition-all bg-white">
+      <img
+        src={props.blog.data.thumbnail}
+        alt={props.blog.data.title}
+        class="object-cover object-center group-hover:scale-105 transition-all"
+      />
+    </div>
+    <div class="flex flex-col py-4 gap-y-4 px-4">
+      <p class="font-semibold">{props.blog.data.title}</p>
+      <p class="text-gray-600 text-sm">{props.blog.data.description}</p>
+    </div>
+  </a>
+</div>

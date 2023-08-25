@@ -1,0 +1,12 @@
+title: Démineur
+description: Premier jeu codé en React avec Tailwind CSS, le bon vieux démineur.
+technologies:
+  - "react"
+  - "tailwind"
+  - "ts"
+github: https://github.com/BillyRonico412/smartteam-demineur-react
+link: https://billyronico412.github.io/smartteam-demineur-react/
+thumbnail: /project/minesweeper.png
+level: 1
+month: 4
+year: 2022

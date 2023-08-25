@@ -1,0 +1,122 @@
+---
+import { Icon } from 'astro-icon'
+import type { CollectionEntry } from 'astro:content'
+import { getEntry } from 'astro:content'
+
+export interface Props {
+  project: CollectionEntry<'project'>
+}
+
+const props = Astro.props
+const levelInfos: Record<
+  1 | 2 | 3,
+  { textColor: string; bgColor: string; borderColor: string; text: string }
+> = {
+  1: {
+    textColor: 'text-green-600',
+    bgColor: 'bg-green-600',
+    borderColor: 'border-green-600',
+    text: 'Débutant',
+  },
+  2: {
+    textColor: 'text-blue-600',
+    bgColor: 'bg-blue-600',
+    borderColor: 'border-blue-600',
+    text: 'Intermédiaire',
+  },
+  3: {
+    textColor: 'text-red-600',
+    bgColor: 'bg-red-600',
+    borderColor: 'border-red-600',
+    text: 'Avancé',
+  },
+}
+const technologies: CollectionEntry<'technology'>[] = []
+
+for (const technologie of props.project.data.technologies) {
+  technologies.push(await getEntry('technology', technologie.id))
+}
+---
+
+<div class="border shadow flex flex-col items-center rounded">
+  <div
+    class="relative w-full max-w-[300px] aspect-square flex items-center justify-center"
+  >
+    <img
+      src={props.project.data.thumbnail}
+      alt={props.project.data.title}
+      class="object-cover object-center w-[90%] aspect-square relative hover:w-[95%] transition-all bg-white"
+    />
+  </div>
+  <div class="bg-gray-100 px-4 py-4 flex-1 flex flex-col gap-y-3">
+    <p class="font-semibold text-gray-800">{props.project.data.title}</p>
+    <div class="flex items-center">
+      <p class="text-[10px] font-medium text-gray-400">
+        {`0${props.project.data.month}`.slice(-2)}/{props.project.data.year}
+      </p>
+      <p
+        class={'text-[10px] font-medium ml-auto flex items-center border rounded ' +
+          levelInfos[props.project.data.level].borderColor}
+      >
+        <span
+          class={'px-1.5 py-0.5 text-gray-100 ' +
+            levelInfos[props.project.data.level].bgColor}
+        >
+          {props.project.data.level}
+        </span>
+        <span
+          class={'px-1.5 ' + levelInfos[props.project.data.level].textColor}
+        >
+          {levelInfos[props.project.data.level].text}
+        </span>
+      </p>
+    </div>
+    <div
+      class="flex text-xs font-medium gap-x-4 gap-y-2 text-gray-500 items-center flex-wrap"
+    >
+      {
+        technologies.map((technologie) => (
+          <div class="flex items-center gap-x-0.5">
+            <Icon
+              name="fa:circle"
+              style={{ color: technologie.data.color }}
+              class="text-[8px] w-2"
+            />
+            <p>{technologie.data.name}</p>
+          </div>
+        ))
+      }
+    </div>
+    <p class="text-sm flex-grow flex items-center text-gray-600">
+      {props.project.data.description}
+    </p>
+    <div
+      class="text-sm font-semibold flex justify-center text-gray-100 gap-x-4 pt-4"
+    >
+      <a
+        href={props.project.data.link}
+        class="bg-gray-600 rounded px-4 py-2 flex items-center gap-x-1"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Icon
+          name="lucide:eye"
+          class="w-4"
+        />
+        View
+      </a>
+      <a
+        href={props.project.data.github}
+        class="bg-gray-600 rounded px-4 py-2 flex items-center gap-x-1"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Github
+        <Icon
+          name="lucide:github"
+          class="w-4"
+        />
+      </a>
+    </div>
+  </div>
+</div>

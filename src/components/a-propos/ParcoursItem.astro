@@ -1,0 +1,36 @@
+---
+interface DateDebutFin {
+  mois: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+  annee: number
+}
+export interface ParcoursItemInterface {
+  title: string
+  subtitle: string
+  debut: DateDebutFin
+  fin: DateDebutFin | undefined
+  tasks: string[]
+}
+export interface Props {
+  parcoursItem: ParcoursItemInterface
+}
+
+const props = Astro.props
+---
+
+<div class="px-4 py-4">
+  <h3 class="font-semibold">{props.parcoursItem.title}</h3>
+  <h4 class="text-sm font-medium mt-2">{props.parcoursItem.subtitle}</h4>
+  <p class="text-xs mt-2">
+    {props.parcoursItem.debut.mois}/{props.parcoursItem.debut.annee} -{' '}
+    {
+      props.parcoursItem.fin
+        ? `${`0${props.parcoursItem.fin.mois}`.slice(-2)}/${
+            props.parcoursItem.fin.annee
+          }`
+        : "Aujourd'hui"
+    }
+  </p>
+  <ul class="list-inside text-sm mt-4 text-gray-500">
+    {props.parcoursItem.tasks.map((task) => <li class="list-disc">{task}</li>)}
+  </ul>
+</div>

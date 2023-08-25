@@ -1,0 +1,13 @@
+title: Country quiz
+description: Un quiz permettant de jouer à des jeux concernant la géographie. Utilisation de la librairie Xstate pour gérer l'état (très intéressant).
+technologies:
+  - "react"
+  - "xstate"
+  - "tailwind"
+  - "ts"
+github: https://github.com/BillyRonico412/country-quiz
+link: https://country-quiz-rosy.vercel.app/
+thumbnail: /project/countryQuiz.png
+level: 1
+month: 2
+year: 2023

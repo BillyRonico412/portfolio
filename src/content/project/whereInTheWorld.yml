@@ -1,0 +1,12 @@
+title: Where in the world
+description: Une encyclopédie des pays du monde en se servant de l'API Rest Countries. (Avec un dark mode)
+technologies:
+  - "react"
+  - "tailwind"
+  - "ts"
+github: https://github.com/BillyRonico412/rest-countries-react
+link: https://billyronico412.github.io/rest-countries-react/
+thumbnail: /project/whereInTheWorld.png
+level: 2
+month: 5
+year: 2022

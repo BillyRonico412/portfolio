@@ -1,0 +1,10 @@
+title: 30 jours d'intégration
+description: Ensemble de projets réaliser dans le but de me perfectionner sur le développement Front End en utilisant le framework Tailwind CSS.
+technologies:
+  - tailwind
+github: https://github.com/BillyRonico412/30-jours-integration
+link: https://30-jours-integration.vercel.app/
+thumbnail: /project/30DaysOfIntegration.png
+level: 2
+month: 7
+year: 2021

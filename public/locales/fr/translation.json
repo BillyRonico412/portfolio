@@ -1,0 +1,18 @@
+{
+  "header": {
+    "index": {
+      "title": "Ronico Billy",
+      "description": "Étudiant en master informatique à l'Université Paul Sabatier de Toulouse 👨‍🎓 et freelance dans mes heures perdus, j'ai un profil de développeur Full Stack Typescript 💻. Je suis polyvalent et maîtrise les diverses étapes de la création d'une application web ou mobile. De la compréhension des besoins des utilisateurs, au développement frontend et backend jusqu'au deploiement 🚀. Amoureux du typage fort proposé par typescript, la téchnologie tRPC m'interesse beaucoup actuellement."
+    }
+  },
+  "navbar": {
+    "subtitle": "Développeur full stack Typescript",
+    "items": {
+      "home": "Accueil",
+      "about": "À propos",
+      "projects": "Projets",
+      "blogs": "Blogs",
+      "contact": "Contact"
+    }
+  }
+}

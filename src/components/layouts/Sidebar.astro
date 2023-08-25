@@ -1,0 +1,195 @@
+---
+import { Icon } from 'astro-icon'
+import { portfolio } from '../../data/portfolio'
+const pathname = Astro.url.pathname
+---
+
+<nav
+  class="bg-noir-menu text-white py-8 w-[300px] flex-col gap-y-8 flex fixed -translate-x-full lg:translate-x-0 lg:relative h-screen z-20 transition-transform overflow-y-auto"
+>
+  <a
+    href="#"
+    class="flex flex-col items-center w-full gap-y-4"
+  >
+    <img
+      src={portfolio.thumbnailFile}
+      class="w-[150px] aspect-square rounded-full"
+    />
+    <p class="text-xl font-semibold flex gap-x-2">
+      <span class="flex items-end">
+        <span class="text-bleu-clair text-2xl translate-y-0.5">
+          {portfolio.firstName[0]}
+        </span>
+        <span>
+          {portfolio.firstName.slice(1)}
+        </span>
+      </span>
+      <span class="flex items-end">
+        <span class="text-bleu-clair text-2xl translate-y-0.5">
+          {portfolio.lastName[0]}
+        </span>
+        <span>
+          {portfolio.lastName.slice(1)}
+        </span>
+      </span>
+      <p class="italic">Développeur full stack</p>
+    </p>
+  </a>
+
+  <ul class="my-auto">
+    <li>
+      <a
+        href="/"
+        class={pathname === '/' ? 'active' : 'inactive'}
+      >
+        <Icon
+          name="mdi:home"
+          class="w-6"
+        />
+        Accueil
+      </a>
+    </li>
+    <li>
+      <a
+        href="/project"
+        class={pathname === '/project' ? 'active' : 'inactive'}
+      >
+        <Icon
+          name="mdi:briefcase"
+          class="w-6"
+        />
+        Projets
+      </a>
+    </li>
+    <li>
+      <a
+        href="/blogs"
+        class={pathname === '/blogs' ? 'active' : 'inactive'}
+      >
+        <Icon
+          name="mdi:book"
+          class="w-6"
+        />
+        Blogs
+      </a>
+    </li>
+  </ul>
+  <ul class="ul-social-media flex justify-center gap-x-2">
+    <li>
+      <a href={portfolio.socialMedia.github}>
+        <Icon
+          name="mdi:github"
+          class="w-8 transition-colors"
+        />
+      </a>
+    </li>
+    <li>
+      <a href={portfolio.socialMedia.linkedin}>
+        <Icon
+          name="mdi:linkedin"
+          class="w-8 transition-colors"
+        />
+      </a>
+    </li>
+    <li>
+      <a href={portfolio.socialMedia.instagram}>
+        <Icon
+          name="mdi:instagram"
+          class="w-8 transition-colors"
+        />
+      </a>
+    </li>
+    <li>
+      <a href={portfolio.socialMedia.cvFile}>
+        <Icon
+          name="mdi:file-account"
+          class="w-8 transition-colors"
+        />
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<div
+  class="w-screen h-screen bg-noir-menu bg-opacity-50 fixed top-0 left-0 z-10 hidden"
+  id="backdrop"
+>
+</div>
+
+<nav class="px-4 flex justify-between items-center lg:hidden shadow">
+  <button id="btn-menu">
+    <Icon
+      name="mdi:menu"
+      class="w-8"
+    />
+  </button>
+  <p class="flex items-center font-bold">
+    {portfolio.firstName}
+    {portfolio.lastName}
+    <Icon
+      name="mdi:thunder"
+      class="w-8 text-bleu-clair"
+    />
+  </p>
+</nav>
+
+<script>
+  const nav = document.querySelector('nav') as HTMLElement
+  const buttonMenu = document.querySelector('#btn-menu') as HTMLButtonElement
+  const backdrop = document.querySelector('#backdrop') as HTMLElement
+
+  buttonMenu.addEventListener('click', () => {
+    nav.classList.remove('-translate-x-full')
+    nav.classList.add('translate-x-0')
+    backdrop.classList.remove('hidden')
+  })
+
+  backdrop.addEventListener('click', () => {
+    nav.classList.remove('translate-x-0')
+    nav.classList.add('-translate-x-full')
+    backdrop.classList.add('hidden')
+  })
+
+  nav.addEventListener('click', (e) => {
+    e.stopPropagation()
+  })
+</script>
+
+<style>
+  .inactive {
+    @apply py-4 px-8 font-semibold flex items-center gap-x-4 transition-colors text-white text-opacity-75;
+  }
+
+  .inactive > * {
+    @apply text-white text-opacity-75;
+  }
+
+  .active {
+    @apply bg-white bg-opacity-10 text-opacity-100 py-4 px-8 font-semibold flex items-center gap-x-4 transition-colors text-white;
+  }
+
+  .inactive:hover {
+    @apply bg-white bg-opacity-10 text-opacity-100;
+  }
+
+  .inactive:hover > *,
+  .active > * {
+    @apply text-bleu-clair;
+  }
+
+  .ul-social-media li a {
+    @apply w-12 aspect-square bg-white text-white bg-opacity-10 rounded-full flex items-center justify-center transition-colors;
+  }
+
+  .ul-social-media li a > * {
+    @apply text-white text-opacity-75;
+  }
+
+  .ul-social-media li a:hover {
+    @apply bg-white bg-opacity-20 text-bleu-clair;
+  }
+
+  .ul-social-media li a:hover > * {
+    @apply text-bleu-clair;
+  }
+</style>

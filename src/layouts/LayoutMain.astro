@@ -1,0 +1,41 @@
+---
+import Sidebar from '../components/layouts/Sidebar.astro'
+import '../style.css'
+
+interface Props {
+  title: string
+  description: string
+}
+const { title, description } = Astro.props
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>
+      {title}
+    </title>
+    <meta
+      name="description"
+      content={description}
+    />
+  </head>
+  <body>
+    <div
+      class="grid grid-rows-[50px_1fr] grid-cols-none lg:grid-rows-none lg:grid-cols-[300px_1fr] h-screen"
+    >
+      <Sidebar />
+      <div class="overflow-y-auto">
+        <div
+          class="container lg:w-[724px] xl:w-[980px] 2xl:w-[1236px] mx-auto px-4 py-8 text-gray-700 dark:text-gray-600"
+        >
+          <slot />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
