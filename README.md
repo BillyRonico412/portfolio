@@ -11,5 +11,5 @@ This is my portfolio where i expose my projects and publish blog related to tech
 
 ## Road Map
 - [ ] English version
-- [ ] Comments
+- [x] Comments
 - [ ] SEO
