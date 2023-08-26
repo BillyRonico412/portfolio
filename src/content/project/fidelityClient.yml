@@ -1,5 +1,5 @@
 title: Fidelity client
-description: Permet d'avoir une carte de fidélité virtuelle sur son smartphone que l'on peut présenter dans différents magasins. 🛍️
+description: Permet d'avoir une carte de fidélité virtuelle sur son smartphone que l'on peut présenter dans différents magasins.
 technologies:
   - "ts"
   - "react"

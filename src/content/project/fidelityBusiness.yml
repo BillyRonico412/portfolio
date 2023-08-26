@@ -1,0 +1,13 @@
+title: Fidelity business
+description: Permet de scanner une carte de fidélité virtuelle sur son smartphone pour gagner ou l'utiliser les points.
+technologies:
+  - "ts"
+  - "react"
+  - "ionic"
+  - "firebase"
+github: https://github.com/BillyRonico412/fidelity-business
+link: https://fidelity-business.vercel.app/
+thumbnail: /project/fidelityBusiness.png
+level: 3
+month: 8
+year: 2023

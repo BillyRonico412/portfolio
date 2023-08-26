@@ -1,5 +1,6 @@
 ---
 import { getCollection, getEntry } from 'astro:content'
+import BlogComment from '../../components/blog/BlogComment.astro'
 import LayoutMain from '../../layouts/LayoutMain.astro'
 export const getStaticPaths = async () => {
   const blogs = await getCollection('blog')
@@ -33,6 +34,9 @@ const { Content } = await blog.render()
     </p>
     <div class="mt-8 blog-content">
       <Content />
+    </div>
+    <div>
+      <BlogComment />
     </div>
   </div>
 </LayoutMain>
