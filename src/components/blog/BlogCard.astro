@@ -12,11 +12,13 @@ const props = Astro.props
     class="flex flex-col rounded overflow-hidden bg-gray-50 border cursor-pointer border-gray-200 shadow group"
     href={'/blogs/' + props.blog.slug}
   >
-    <div class="aspect-square relative transition-all bg-white">
+    <div
+      class="relative w-full max-w-[300px] aspect-square flex items-center justify-center"
+    >
       <img
         src={props.blog.data.thumbnail}
         alt={props.blog.data.title}
-        class="object-cover object-center group-hover:scale-105 transition-all"
+        class="object-cover object-center w-[100%] aspect-square relative hover:w-[105%] transition-all bg-white"
       />
     </div>
     <div class="py-4 px-4">
