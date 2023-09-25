@@ -1,0 +1,13 @@
+title: R.O.T.I
+description: Evaluer le retour sur le temps investi, à la fin d'une réunion ou d'un atelier, sur une échelle de 1 à 5 en faisant voter chaque participant à main levée.
+technologies:
+  - "react"
+  - "tailwind"
+  - "ts"
+  - "firebase"
+github: https://github.com/BillyRonico412/roti
+link: https://roti-gules.vercel.app/
+thumbnail: /project/roti.png
+level: 3
+month: 9
+year: 2023
