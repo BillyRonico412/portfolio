@@ -48,7 +48,7 @@ for (const technologie of props.project.data.technologies) {
       class="object-cover object-center w-[100%] aspect-square relative hover:w-[95%] transition-all bg-white"
     />
   </div>
-  <div class="bg-gray-100 px-4 py-4 flex-1 flex flex-col gap-y-1">
+  <div class="bg-gray-100 px-4 py-4 flex-1 flex flex-col gap-y-2">
     <p class="font-semibold text-gray-800">{props.project.data.title}</p>
     <div class="flex items-center">
       <p class="text-[10px] font-medium text-gray-400">
@@ -71,8 +71,11 @@ for (const technologie of props.project.data.technologies) {
         </span>
       </p>
     </div>
+    <p class="text-sm flex-grow flex items-center text-gray-600">
+      {props.project.data.description}
+    </p>
     <div
-      class="flex text-xs font-medium gap-x-4 gap-y-2 text-gray-500 items-center flex-wrap"
+      class="flex text-xs font-medium gap-x-4 gap-y-2 text-gray-500 justify-center items-center flex-wrap"
     >
       {
         technologies.map((technologie) => (
@@ -87,9 +90,6 @@ for (const technologie of props.project.data.technologies) {
         ))
       }
     </div>
-    <p class="text-sm flex-grow flex items-center text-gray-600">
-      {props.project.data.description}
-    </p>
     <div
       class="text-sm font-semibold flex justify-center text-gray-100 gap-x-4 pt-4"
     >

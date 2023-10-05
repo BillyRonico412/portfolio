@@ -2,7 +2,9 @@
 import { getCollection } from 'astro:content'
 import ProjectCard from '../components/project/ProjectCard.astro'
 import LayoutMain from '../layouts/LayoutMain.astro'
+import { sortByDate } from '../utils'
 const projects = await getCollection('project')
+const lastProjects = projects.sort(sortByDate)
 ---
 
 <LayoutMain
@@ -13,7 +15,7 @@ const projects = await getCollection('project')
     <div
       class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-x-8 gap-y-8"
     >
-      {projects.map((project) => <ProjectCard project={project} />)}
+      {lastProjects.map((project) => <ProjectCard project={project} />)}
     </div>
   </main>
 </LayoutMain>

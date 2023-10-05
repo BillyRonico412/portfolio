@@ -1,0 +1,15 @@
+title: My unsplash
+description: My unsplash est un clone d'unsplash avec sa célèbre mise en page Mansory.
+technologies:
+  - "trpc"
+  - "react"
+  - "xstate"
+  - "tailwind"
+  - "node"
+  - "ts"
+github: https://github.com/BillyRonico412/my-unsplash
+link: https://my-unsplash-indol.vercel.app/
+thumbnail: /project/myUnsplash.webp
+level: 2
+month: 10
+year: 2023
