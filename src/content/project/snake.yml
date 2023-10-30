@@ -6,7 +6,7 @@ technologies:
   - "tailwind"
   - "ts"
 github: https://github.com/BillyRonico412/snake-react
-link: snake-react-omega.vercel.app
+link: https://snake-react-omega.vercel.app
 thumbnail: /project/snake.png
 level: 2
 month: 11
