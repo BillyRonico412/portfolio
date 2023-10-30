@@ -1,0 +1,13 @@
+title: Snake
+description: Snake est un jeu de serpent classique codé en React. Le but du jeu est de manger le plus de pommes possible sans se mordre la queue.
+technologies:
+  - "react"
+  - "xstate"
+  - "tailwind"
+  - "ts"
+github: https://github.com/BillyRonico412/snake-react
+link: snake-react-omega.vercel.app
+thumbnail: /project/snake.png
+level: 2
+month: 11
+year: 2023
