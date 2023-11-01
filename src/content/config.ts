@@ -16,7 +16,7 @@ const project = defineCollection({
 		title: z.string().nonempty(),
 		description: z.string().nonempty(),
 		technologies: z.array(reference("technology")),
-		github: z.string().nonempty(),
+		github: z.string().nonempty().nullable(),
 		link: z.string().nonempty().nullable(),
 		level: z.union([z.literal(1), z.literal(2), z.literal(3)]),
 		month: z.union([

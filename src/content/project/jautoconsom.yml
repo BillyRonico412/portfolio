@@ -1,0 +1,16 @@
+title: Jautoconsom
+description: Developpement de l'application de simulation du site jautoconsom.fr
+technologies:
+  - "trpc"
+  - "react"
+  - "xstate"
+  - "tailwind"
+  - "node"
+  - "ts"
+  - "docker"
+github: null
+link: https:/simulation.jautoconsom.fr/
+thumbnail: /project/jautoconsom.webp
+level: 2
+month: 11
+year: 2023

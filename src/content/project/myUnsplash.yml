@@ -7,6 +7,7 @@ technologies:
   - "tailwind"
   - "node"
   - "ts"
+  - "docker"
 github: https://github.com/BillyRonico412/my-unsplash
 link: https://my-unsplash-indol.vercel.app/
 thumbnail: /project/myUnsplash.png
