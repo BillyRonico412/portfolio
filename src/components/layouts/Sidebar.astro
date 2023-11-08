@@ -52,7 +52,7 @@ const pathname = Astro.url.pathname
     <li>
       <a
         href="/project"
-        class={pathname === '/project' ? 'active' : 'inactive'}
+        class={pathname.includes('/project') ? 'active' : 'inactive'}
       >
         <Icon
           name="mdi:briefcase"
@@ -64,7 +64,7 @@ const pathname = Astro.url.pathname
     <li>
       <a
         href="/blogs"
-        class={pathname === '/blogs' ? 'active' : 'inactive'}
+        class={pathname.includes('/blogs') ? 'active' : 'inactive'}
       >
         <Icon
           name="mdi:book"
