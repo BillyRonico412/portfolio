@@ -1,0 +1,14 @@
+title: Light Shared
+description: Une application de gestion de lumière partagée entre plusieurs utilisateurs.
+technologies:
+  - react
+  - tailwind
+  - ts
+  - socketio
+  - docker
+github: https://github.com/BillyRonico412/light-shared
+link: https://light-shared-front-rbme16lse-billyronico412.vercel.app/
+thumbnail: /project/lightShared.png
+level: 1
+month: 11
+year: 2023
