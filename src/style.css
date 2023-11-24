@@ -10,7 +10,7 @@ body {
 }
 
 .blog-content .astro-code {
-  @apply p-4 mt-4 rounded;
+  @apply p-4 mt-4 rounded text-sm !font-medium;
 }
 
 .blog-content h1 {
