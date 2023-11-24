@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content'
 import BlogCard from '../../components/blog/BlogCard.astro'
 import LayoutMain from '../../layouts/LayoutMain.astro'
+
 const blogs = await getCollection('blog')
 ---
 
@@ -9,10 +10,8 @@ const blogs = await getCollection('blog')
   title="Projets"
   description="Mes projets personnels et professionnels"
 >
-  <main>
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-x-8 gap-y-8"
-    >
+  <main class="flex flex-col gap-y-8">
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-x-8 gap-y-8">
       {blogs.map((blog) => <BlogCard blog={blog} />)}
     </div>
   </main>

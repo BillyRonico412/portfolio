@@ -43,8 +43,8 @@ const blog = defineCollection({
 	schema: z.object({
 		title: z.string().nonempty(),
 		description: z.string().nonempty(),
-		thumbnail: z.string().nonempty(),
 		date: z.string().nonempty(),
+		tags: z.array(z.string().nonempty()).max(10),
 	}),
 })
 

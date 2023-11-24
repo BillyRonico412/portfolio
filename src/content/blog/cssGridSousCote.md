@@ -2,8 +2,8 @@
 title: CSS Grid est sous-coté 👎
 slug: css-grid-est-sous-cote
 description: Depuis sa sortie en 2017, CSS Grid est devenu une fonctionnalité essentielle pour les développeurs front-end. Cependant, il est souvent sous-estimé par rapport à son homologue, le display flex. Dans cet article, nous allons explorer pourquoi CSS Grid est sous-coté et pourquoi il est temps de lui donner une chance.
-thumbnail: /blog/cssGridSousCote/thumbnail.png
-date: 29/07/2023
+date: "29/07/2023"
+tags: ["CSS", "CSS Grid"]
 ---
 
 Depuis sa sortie en 2017, CSS Grid est devenu une fonctionnalité essentielle pour les développeurs front-end. Cependant, il est souvent sous-estimé par rapport à son homologue, le display flex. Dans cet article, nous allons explorer pourquoi CSS Grid est sous-coté et pourquoi il est temps de lui donner une chance.

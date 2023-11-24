@@ -1,0 +1,14 @@
+---
+interface Props {
+  action: string
+}
+
+const props = Astro.props
+---
+
+<form
+  action={props.action}
+  method="get"
+>
+  <input type="text" class="shadow border border-gray-100 rounded px-4 py-2" placeholder="Rechercher ..." name="search" />
+</form>

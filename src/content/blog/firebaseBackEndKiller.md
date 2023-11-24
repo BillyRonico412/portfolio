@@ -2,8 +2,8 @@
 title: "Firebase: Le backend killer ☠️"
 slug: firebase-le-backend-killer
 description: "Firebase offre une multitude de fonctionnalités, notamment l'authentification, les bases de données, le temps réel, le déploiement et bien plus encore. Tout cela est facilement accessible à partir d'une interface utilisateur intuitive et conviviale."
-thumbnail: /blog/firebaseBackEndKiller/thumbnail.png
-date: 02/09/2023
+date: "02/09/2023"
+tags: ["Firebase", "Backend"]
 ---
 
 👋 Salut les développeurs ! Si vous êtes fatigués de développer votre propre backend, je vous présente Firebase, la solution Backend-as-a-Service (BaaS) de Google. Firebase vous permet de créer un backend robuste et sécurisé en un rien de temps, sans avoir à vous soucier de la gestion de serveurs, de la configuration et de la maintenance.
