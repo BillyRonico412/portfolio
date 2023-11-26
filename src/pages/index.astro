@@ -16,6 +16,7 @@ const lastProjects = projects
     const dateA = new Date()
     dateA.setMonth(a.data.month - 1)
     dateA.setFullYear(a.data.year)
+    if (dateB.getTime() === dateA.getTime()) return -1
     return dateB.getTime() - dateA.getTime()
   })
   .slice(0, 4)
