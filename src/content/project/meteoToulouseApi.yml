@@ -1,0 +1,13 @@
+title: Meteo Toulouse Api
+description: Une API qui joue le rôle de proxy pour l'API meteo-concept afin de mettre en cache les données ainsi ne pas dépasser la limite de requête de l'API.
+technologies:
+  - node
+  - ts
+  - express
+  - docker
+github: https://github.com/BillyRonico412/meteo-toulouse-api
+link: https://meteo-toulouse-api.ronico-billy.fr
+thumbnail: /project/meteoToulouseApi.svg
+level: 1
+month: 12
+year: 2023
