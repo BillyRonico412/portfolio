@@ -2,9 +2,9 @@
 import { getCollection } from 'astro:content'
 import ProjectCard from '../components/project/ProjectCard.astro'
 import LayoutMain from '../layouts/LayoutMain.astro'
-import { sortByDate } from '../utils'
+import { sortProject } from '../utils'
 const projects = await getCollection('project')
-const lastProjects = projects.sort(sortByDate)
+const lastProjects = projects.sort(sortProject)
 ---
 
 <LayoutMain

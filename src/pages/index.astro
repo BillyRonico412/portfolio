@@ -6,20 +6,10 @@ import Parcours, {
 import BlogCard from '../components/blog/BlogCard.astro'
 import ProjectCard from '../components/project/ProjectCard.astro'
 import LayoutMain from '../layouts/LayoutMain.astro'
+import { sortProject } from '../utils'
 const projects = await getCollection('project')
 const blogs = await getCollection('blog')
-const lastProjects = projects
-  .sort((a, b) => {
-    const dateB = new Date()
-    dateB.setMonth(b.data.month - 1)
-    dateB.setFullYear(b.data.year)
-    const dateA = new Date()
-    dateA.setMonth(a.data.month - 1)
-    dateA.setFullYear(a.data.year)
-    if (dateB.getTime() === dateA.getTime()) return -1
-    return dateB.getTime() - dateA.getTime()
-  })
-  .slice(0, 4)
+const lastProjects = projects.sort(sortProject).slice(0, 4)
 const lastBlogs = blogs.reverse().slice(0, 4)
 const parcoursUniversitaire: ParcoursInterface = {
   title: 'Parcours universitaire 👨‍🎓',
