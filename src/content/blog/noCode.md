@@ -5,8 +5,6 @@ description: "Découvrez une présentation épique de la soirée 🎉 qui a réc
 date: '18/12/2023'
 tags: ['NoCode', 'Bubble', 'Flutter Flow', 'Airtable', 'Zapier']
 ---
-# La soirée épique du NoCode : L'émergence triomphante d'une révolution technologique
-
 ## **Présentation épique de la soirée**
 
 🎉 Mes amis, laissez-moi vous conter une incroyable aventure qui a récemment jalonné mon chemin. J'ai eu l'immense privilège de participer à un meetup légendaire, orchestré par la grandiose communauté [NoCode France](https://nocode-france.fr/), dont la renommée dépasse les frontières. Tels des héros chevronnés, nous nous sommes rassemblés dans un restaurant emblématique, niché au cœur de la vibrant cité de Toulouse. L'atmosphère y était à la fois cosy et chaleureuse, propice à l'épanouissement de nos esprits audacieux.
