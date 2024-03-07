@@ -35,6 +35,7 @@ const project = defineCollection({
 		]),
 		year: z.number(),
 		thumbnail: z.string().nonempty(),
+		pin: z.boolean().optional()
 	}),
 })
 

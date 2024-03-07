@@ -1,0 +1,12 @@
+title: Meteo Toulouse Web
+description: Une application web qui permet de visualiser la météo de Toulouse.
+technologies:
+  - react
+  - tailwind
+  - ts
+github: https://github.com/BillyRonico412/meteo-toulouse-web
+link: https://meteo-toulouse-web.vercel.app/
+thumbnail: /project/meteoToulouseWeb.svg
+level: 1
+month: 12
+year: 2023
