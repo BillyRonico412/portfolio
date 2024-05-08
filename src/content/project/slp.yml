@@ -1,0 +1,12 @@
+title: Strategic Leap Partners
+description: Un site web developpé en Next.js avec TailwindCSS et Framer Motion pour une entreprise de conseil en stratégie.
+technologies:
+  - nextjs
+  - tailwind
+  - framer-motion
+link: https://www.strategicleappartners.com/
+thumbnail: /project/slp.webp
+github: null
+level: 2
+month: 5
+year: 2024
