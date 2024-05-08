@@ -1,5 +1,6 @@
 ---
-import { Icon } from 'astro-icon'
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
 import type { CollectionEntry } from 'astro:content'
 import { getEntry } from 'astro:content'
 
@@ -42,13 +43,16 @@ for (const technologie of props.project.data.technologies) {
   <div
     class="relative w-full max-w-[300px] aspect-square flex items-center justify-center"
   >
-    <img
+    <Image
       src={props.project.data.thumbnail}
       alt={props.project.data.title}
-      class="object-contain object-center w-[95%] aspect-square relative hover:w-[90%] transition-all bg-white"
+      width={300}
+      height={300}
+      loading="eager"
+      class="object-cover object-center aspect-square w-full relative hover:w-[95%] transition-all bg-white"
     />
   </div>
-  <div class="bg-gray-100 px-4 py-4 flex-1 flex flex-col gap-y-2">
+  <div class="bg-gray-100 w-full px-4 py-4 flex-1 flex flex-col gap-y-2">
     <p class="font-semibold text-gray-800">{props.project.data.title}</p>
     <div class="flex items-center">
       <p class="text-[10px] font-medium text-gray-400">
@@ -80,8 +84,11 @@ for (const technologie of props.project.data.technologies) {
       {
         technologies.map((technologie) => (
           <a href={technologie.data.link}>
-            <img
+            <Image
               title={technologie.data.name}
+              width={16}
+              height={16}
+              loading="lazy"
               class="w-4"
               src={`https://cdn.simpleicons.org/${technologie.data.simpleIcon}/${technologie.data.color}`}
               alt={technologie.data.name}
@@ -100,13 +107,14 @@ for (const technologie of props.project.data.technologies) {
         rel="noreferrer"
       >
         <Icon
+          title="View"
           name="lucide:eye"
           class="w-4"
         />
         View
       </a>
       <a
-        href={props.project.data.github}
+        href={props.project.data.github ?? '#home'}
         class={'bg-gray-600 rounded px-4 py-2 flex items-center gap-x-1 ' +
           (props.project.data.github === null
             ? '!opacity-50 cursor-not-allowed'
@@ -116,6 +124,7 @@ for (const technologie of props.project.data.technologies) {
       >
         Github
         <Icon
+          title="Github"
           name="lucide:github"
           class="w-4"
         />

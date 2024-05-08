@@ -1,0 +1,12 @@
+title: Perdu dans le desert
+description: Calculer les points du jeu "Perdu dans le desert"
+technologies:
+  - "ts"
+  - "react"
+  - "shadcn"
+github: https://github.com/BillyRonico412/perdu-dans-le-desert
+link: https://perdu-dans-le-desert.vercel.app/
+thumbnail: /project/perdu-dans-le-desert.png
+level: 1
+month: 3
+year: 2024

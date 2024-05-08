@@ -1,6 +1,7 @@
 ---
-import { Icon } from 'astro-icon'
+import { Icon } from 'astro-icon/components'
 import { portfolio } from '../../data/portfolio'
+import { Image } from 'astro:assets'
 const pathname = Astro.url.pathname
 ---
 
@@ -8,12 +9,16 @@ const pathname = Astro.url.pathname
   class="bg-noir-menu text-white py-8 w-[300px] flex-col gap-y-8 flex fixed -translate-x-full lg:translate-x-0 lg:relative h-screen z-20 transition-transform overflow-y-auto"
 >
   <a
-    href="#"
+    href="/"
     class="flex flex-col items-center w-full gap-y-4"
   >
-    <img
+    <Image
       src={portfolio.thumbnailFile}
-      class="w-[150px] aspect-square rounded-full"
+      class="rounded-full"
+      alt="Profil"
+      width={150}
+      height={150}
+      loading="eager"
     />
     <p class="text-xl font-semibold flex gap-x-2">
       <span class="flex items-end">
@@ -43,8 +48,8 @@ const pathname = Astro.url.pathname
         class={pathname === '/' ? 'active' : 'inactive'}
       >
         <Icon
-          name="mdi:home"
-          class="w-6"
+          name="lucide:home"
+          class="text-lg"
         />
         Accueil
       </a>
@@ -55,8 +60,8 @@ const pathname = Astro.url.pathname
         class={pathname.includes('/project') ? 'active' : 'inactive'}
       >
         <Icon
-          name="mdi:briefcase"
-          class="w-6"
+          name="lucide:monitor-smartphone"
+          class="text-lg"
         />
         Projets
       </a>
@@ -67,8 +72,8 @@ const pathname = Astro.url.pathname
         class={pathname.includes('/blogs') ? 'active' : 'inactive'}
       >
         <Icon
-          name="mdi:book"
-          class="w-6"
+          name="lucide:book"
+          class="text-lg"
         />
         Blogs
       </a>
@@ -78,32 +83,39 @@ const pathname = Astro.url.pathname
     <li>
       <a href={portfolio.socialMedia.github}>
         <Icon
-          name="mdi:github"
-          class="w-8 transition-colors"
+          name="lucide:github"
+          class="text-xl transition-colors"
+          title="GitHub"
         />
       </a>
     </li>
     <li>
       <a href={portfolio.socialMedia.linkedin}>
         <Icon
-          name="mdi:linkedin"
-          class="w-8 transition-colors"
+          name="lucide:linkedin"
+          class="text-xl transition-colors"
+          title="LinkedIn"
         />
       </a>
     </li>
     <li>
       <a href={portfolio.socialMedia.instagram}>
         <Icon
-          name="mdi:instagram"
-          class="w-8 transition-colors"
+          name="lucide:instagram"
+          class="text-xl transition-colors"
+          title="Instagram"
         />
       </a>
     </li>
     <li>
-      <a href={portfolio.socialMedia.cvFile}>
+      <a
+        href={portfolio.socialMedia.cvFile}
+        download={portfolio.socialMedia.cvFile}
+      >
         <Icon
-          name="mdi:file-account"
-          class="w-8 transition-colors"
+          name="lucide:file-badge"
+          class="text-xl transition-colors"
+          title="CV"
         />
       </a>
     </li>
@@ -119,17 +131,13 @@ const pathname = Astro.url.pathname
 <nav class="px-4 flex justify-between items-center lg:hidden shadow">
   <button id="btn-menu">
     <Icon
-      name="mdi:menu"
-      class="w-8"
+      name="lucide:menu"
+      class="text-xl"
     />
   </button>
   <p class="flex items-center font-bold">
     {portfolio.firstName}
     {portfolio.lastName}
-    <Icon
-      name="mdi:thunder"
-      class="w-8 text-bleu-clair"
-    />
   </p>
 </nav>
 

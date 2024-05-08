@@ -1,0 +1,10 @@
+title: Plus ou moins
+description: "Jeu de devinette de nombre"
+technologies:
+  - "flutter"
+github: https://github.com/BillyRonico412/plus-ou-moins-flutter
+link: https://plus-ou-moins-flutter.vercel.app
+thumbnail: /project/plus-ou-moins.png
+level: 1
+month: 3
+year: 2024
