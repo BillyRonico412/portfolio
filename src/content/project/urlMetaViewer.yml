@@ -1,0 +1,13 @@
+title: URL Meta Viewer
+description: Un outil pour visualiser les métadonnées d'une URL
+technologies:
+  - "nextjs"
+  - "tailwind"
+  - "ts"
+  - "shadcn"
+github: https://github.com/BillyRonico412/url-meta-viewer
+link: https://url-meta-viewer.vercel.app/
+thumbnail: /project/urlMetaViewer.png
+level: 1
+month: 05
+year: 2024
