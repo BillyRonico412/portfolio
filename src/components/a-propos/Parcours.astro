@@ -1,5 +1,5 @@
 ---
-import ParcoursItem, { ParcoursItemInterface } from './ParcoursItem.astro'
+import ParcoursItem, { type ParcoursItemInterface } from './ParcoursItem.astro'
 export interface ParcoursInterface {
   title: string
   parcoursItems: ParcoursItemInterface[]
@@ -10,7 +10,7 @@ export interface Props {
 const props = Astro.props
 ---
 
-<div class="h-full flex flex-col shadow">
+<div class="h-full flex flex-col shadow rounded overflow-hidden">
   <h2 class="bg-gray-600 text-white text-center py-2 font-semibold">
     {props.parcours.title}
   </h2>
