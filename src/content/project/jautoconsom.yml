@@ -1,5 +1,5 @@
 title: Jautoconsom
-description: Developpement de l'application de simulation du site jautoconsom.fr
+description: Développement de l'application de simulation du site jautoconsom.fr
 technologies:
   - "trpc"
   - "react"

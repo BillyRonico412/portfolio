@@ -1,5 +1,5 @@
 title: R.O.T.I
-description: Evaluer le retour sur le temps investi, à la fin d'une réunion ou d'un atelier, sur une échelle de 1 à 5 en faisant voter chaque participant à main levée.
+description: Évaluer le retour sur le temps investi, à la fin d'une réunion ou d'un atelier, sur une échelle de 1 à 5 en faisant voter chaque participant à main levée.
 technologies:
   - "react"
   - "tailwind"
