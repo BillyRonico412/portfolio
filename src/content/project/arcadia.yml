@@ -1,0 +1,12 @@
+title: Arcadia
+description: Un projet de développement d'application web pour le zoo Arcadia en Bretagne, visant à créer une plateforme interactive pour les visiteurs, employés, vétérinaires et administrateurs, avec un focus sur l'écologie et le bien-être animal
+technologies:
+  - "shadcn"
+  - "nextjs"
+  - "ts"
+  - "prisma-orm"
+link: https://arcadia-one-orcin.vercel.app/
+github: null
+thumbnail: /project/arcadia.png
+month: 11
+year: 2024

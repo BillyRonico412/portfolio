@@ -1,24 +1,23 @@
-import { z, defineCollection, reference } from "astro:content"
+import { z, defineCollection, reference } from 'astro:content'
 
 const technology = defineCollection({
-	type: "data",
+	type: 'data',
 	schema: z.object({
-		name: z.string().nonempty(),
-		simpleIcon: z.string().nonempty(),
-		color: z.string().nonempty(),
-		link: z.string().nonempty(),
+		name: z.string().min(1),
+		simpleIcon: z.string().min(1),
+		color: z.string().min(1),
+		link: z.string().min(1),
 	}),
 })
 
 const project = defineCollection({
-	type: "data",
+	type: 'data',
 	schema: z.object({
-		title: z.string().nonempty(),
-		description: z.string().nonempty(),
-		technologies: z.array(reference("technology")),
-		github: z.string().nonempty().nullable(),
-		link: z.string().nonempty().nullable(),
-		level: z.union([z.literal(1), z.literal(2), z.literal(3)]),
+		title: z.string().min(1),
+		description: z.string().min(1),
+		technologies: z.array(reference('technology')),
+		github: z.string().min(1).nullable(),
+		link: z.string().min(1).nullable(),
 		month: z.union([
 			z.literal(1),
 			z.literal(2),
@@ -34,18 +33,18 @@ const project = defineCollection({
 			z.literal(12),
 		]),
 		year: z.number(),
-		thumbnail: z.string().nonempty(),
-		pin: z.boolean().optional()
+		thumbnail: z.string().min(1),
+		pin: z.boolean().optional(),
 	}),
 })
 
 const blog = defineCollection({
-	type: "content",
+	type: 'content',
 	schema: z.object({
-		title: z.string().nonempty(),
-		description: z.string().nonempty(),
-		date: z.string().nonempty(),
-		tags: z.array(z.string().nonempty()).max(10),
+		title: z.string().min(1),
+		description: z.string().min(1),
+		date: z.string().min(1),
+		tags: z.array(z.string().min(1)).max(10),
 	}),
 })
 
