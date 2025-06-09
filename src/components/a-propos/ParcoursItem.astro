@@ -30,7 +30,7 @@ const props = Astro.props
         : "Aujourd'hui"
     }
   </p>
-  <ul class="list-inside text-sm mt-4 text-gray-500">
+  <ul class="list-inside text-sm mt-4 text-gray-500 space-y-1">
     {props.parcoursItem.tasks.map((task) => <li class="list-disc">{task}</li>)}
   </ul>
 </div>
